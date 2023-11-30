@@ -26,8 +26,6 @@ struct baseball_game {
 static struct baseball_game data;
 static int initialized = 0;
 
-#include <stdio.h>
-
 static void init_answer(struct baseball_game* game)
 {
 	int i;
@@ -42,12 +40,6 @@ static void init_answer(struct baseball_game* game)
 		buffer[a] = buffer[b];
 		buffer[b] = t;
 	}
-
-	for(i=0; i!=NUMBER_SEQUENCE_LEN; ++i) {
-		game->answer[i] = buffer[i];
-		printf("%d ", game->answer[i]);
-	}
-	printf("\n");
 }
 
 void reset()
